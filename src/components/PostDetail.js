@@ -4,7 +4,7 @@ const PostDetail = ({ torecieve }) => {
   const [post, setPost] = useState(null);
 
   /*useEffect(() => {
-    fetch(`http://localhost:3001/PostPage/${torecieve}`)
+    fetch(`http://zouinpix.live:3001/PostPage/${torecieve}`)
       .then(response => response.json())
       .then(data => setPost(data))
       .catch(err => console.log(err));

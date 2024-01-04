@@ -12,7 +12,7 @@ const AdminPage = () => {
   const [editableUserId, setEditableUserId] = useState(null);
   const [newRole, setNewRole] = useState("");
   useEffect(() => {
-    axios.get('http://localhost:3001/admin')
+    axios.get('http://zouinpix.live:3001/admin')
       .then(result => setUsers(result.data))
       .catch(err => console.log(err))
   }, [])
@@ -34,7 +34,7 @@ const AdminPage = () => {
   }
 
   const deleteConfirmHandler = (id) => {
-    axios.delete(`http://localhost:3001/delete/${id}`)
+    axios.delete(`http://zouinpix.live:3001/delete/${id}`)
       .then(res => {
         console.log(res);
         window.location.reload();
@@ -51,7 +51,7 @@ const AdminPage = () => {
   };
 
   const saveRole = (userId) => {
-    axios.post(`http://localhost:3001/role/${userId}`, { role: newRole }, { withCredentials: true })
+    axios.post(`http://zouinpix.live:3001/role/${userId}`, { role: newRole }, { withCredentials: true })
       .then(res => {
         console.log(res);
         setEditableUserId(null);

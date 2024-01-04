@@ -1,4 +1,4 @@
- 
+
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import DeleteConfirmation from './DeleteConfirmation';
@@ -25,7 +25,7 @@ const Category = () => {
   };
 
   useEffect(() => {
-    axios.get('http://localhost:3001/categories')
+    axios.get('http://zouinpix.live:3001/categories')
       .then(result => setCategories(result.data))
       .catch(err => console.log(err));
   }, []);
@@ -40,7 +40,7 @@ const Category = () => {
   }
 
   const deleteConfirmHandler = (id) => {
-    axios.delete(`http://localhost:3001/delete/${id}`)
+    axios.delete(`http://zouinpix.live:3001/delete/${id}`)
       .then(res => {
         console.log(res);
         window.location.reload();
@@ -126,11 +126,11 @@ const Category = () => {
                         ⋮
                       </button>
                       {showMenu && decoded && decoded.role === 'admin' && (
-                           <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white z-50">
-                           <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                             <a href="#" onClick={() => showDeleteConfirmation(categorie._id)} className="block px-4 py-2 text-sm text-red hover:bg-gray-100" role="menuitem">Remove Category</a>
-                           </div>
-          
+                        <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white z-50">
+                          <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                            <a href="#" onClick={() => showDeleteConfirmation(categorie._id)} className="block px-4 py-2 text-sm text-red hover:bg-gray-100" role="menuitem">Remove Category</a>
+                          </div>
+
                         </div>
                       )}
 

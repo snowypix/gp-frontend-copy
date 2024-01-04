@@ -14,13 +14,13 @@ const Register = () => {
     const [prenom, setPrenom] = useState('');
     const [age, setAge] = useState('');
     const [email, setEmail] = useState('');
- 
+
     const [pays, setPays] = useState('');
     const [password, setPassword] = useState('')
     const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:3001/register', { nom, prenom, age, email , password, pays })
+        axios.post('http://zouinpix.live:3001/register', { nom, prenom, age, email, password, pays })
             .then(result => {
                 console.log(result)
                 navigate('/login')
@@ -134,7 +134,7 @@ const Register = () => {
                                 ))}
                             </select>
                         </div>
-                    
+
                         <button type="submit" className="btn btn-success w-100 rounded-0">Sign Up</button>
 
                         <div className="account">

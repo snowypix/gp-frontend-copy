@@ -8,7 +8,7 @@ const Profile = () => {
   const [profileData, setProfileData] = useState(null);
   const userId = useParams();
   useEffect(() => {
-    fetch(`http://localhost:3001/profile/${userId.id}`, { // Using userId in the API call
+    fetch(`http://zouinpix.live:3001/profile/${userId.id}`, { // Using userId in the API call
       credentials: 'include'
     })
       .then(response => response.json())

@@ -24,12 +24,12 @@ const Posting = () => {
     const [cookies] = useCookies(['token']);
     console.log(cookies)
     const decodedToken = jwtDecode(cookies.token);
- 
+
     const loggedInUserId = decodedToken.id;
 
     axios
       .post(
-        'http://localhost:3001/Posting',
+        'http://zouinpix.live:3001/Posting',
         {
           titre: postTitle,
           contenu: postBody,
@@ -86,8 +86,8 @@ const Posting = () => {
                   onChange={handleBodyChange}
                 ></textarea>
               </div> <center>
-              <button type="submit" className="bg-black text-white p-2 rounded">Submit Post</button> <br/><br/>
-              <p><a href='/Posts'>Abort, and return to home ←</a></p> </center>
+                <button type="submit" className="bg-black text-white p-2 rounded">Submit Post</button> <br /><br />
+                <p><a href='/Posts'>Abort, and return to home ←</a></p> </center>
             </form>
           </div>
         </div>

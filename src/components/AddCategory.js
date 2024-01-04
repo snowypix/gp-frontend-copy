@@ -11,7 +11,7 @@ const AddCategory = () => {
   const Submit = (e) => {
     e.preventDefault();
     axios
-      .post('http://localhost:3001/new-category', { nom, description })
+      .post('http://zouinpix.live:3001/new-category', { nom, description })
       .then((result) => {
         alert('Category added Successfully!');
         navigate('/categories');

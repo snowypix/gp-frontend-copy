@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const SideBar = () => {
   const navigate = useNavigate();
   const handleLogout = () => {
-    axios.post('http://localhost:3001/logout')
+    axios.post('http://zouinpix.live:3001/logout')
       .then(result => {
         console.log(result);
         if (result.data === 'Logged out successfully') {
