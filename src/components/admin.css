@@ -1,0 +1,23 @@
+.email-column {
+    width: 20%;
+    /* Adjust as needed */
+}
+
+.role-column {
+    width: 15%;
+    /* Adjust as needed */
+}
+
+.action-column {
+    width: 15%;
+    /* Adjust as needed */
+}
+
+.email-column {
+    word-wrap: break-word;
+}
+
+.table {
+    table-layout: fixed;
+    width: 100%;
+}

@@ -1,0 +1,103 @@
+.table {
+    width: 100%;
+    /* Full width of the container */
+    table-layout: fixed;
+    /* Fixed table layout for even distribution */
+    border-collapse: collapse;
+    /* Optional: for a cleaner look */
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    /* Add padding inside cells */
+    text-align: left;
+    /* Align text to the left */
+    border-bottom: 1px solid #ddd;
+    /* Optional: for a line between rows */
+}
+
+/* Adjust the width of each column as needed */
+.table th:nth-child(1),
+.table td:nth-child(1) {
+    width: 25%;
+    /* Adjust as needed */
+}
+
+.table th:nth-child(2),
+.table td:nth-child(2) {
+    width: 50%;
+    /* Adjust as needed */
+}
+
+.table th:nth-child(3),
+.table td:nth-child(3) {
+    width: 15%;
+    /* Adjust as needed */
+}
+
+.table th:nth-child(4),
+.table td:nth-child(4) {
+    width: 10%;
+    /* Adjust as needed */
+}
+
+/* Ensure the last column has a smaller width if it's just for actions */
+.table th:last-child,
+.table td:last-child {
+    width: 10%;
+    /* Adjust as needed */
+    text-align: right;
+    /* Align action buttons or icons to the right */
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    /* Removes the default spacing between rows */
+    margin: 0 auto;
+    /* Centers the table in the parent div */
+}
+
+.table th,
+.table td {
+    padding: 1rem;
+    /* Adds space inside each cell */
+    text-align: left;
+    /* Aligns the text to the left side of the cell */
+    vertical-align: middle;
+    /* Centers the content vertically */
+    border-bottom: 1px solid #ddd;
+    /* Adds a line below each row */
+}
+
+.table th {
+    background-color: #f5f5f5;
+    /* Sets a background color for the header row */
+}
+
+.table tr {
+    background-color: #ffffff;
+    /* Sets a background color for each row */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Adds a shadow to make each row look like a rectangle */
+    margin-bottom: 1rem;
+    /* Adds space between the rows */
+    border-radius: 0.5rem;
+    /* Rounds the corners of the rectangles */
+}
+
+/* Additional styling for hover effect */
+.table tr:hover {
+    background-color: #efefef;
+    /* Changes the background color when hovering */
+}
+
+/* Responsive table scrolling on small devices */
+@media (max-width: 768px) {
+    .table-responsive {
+        overflow-x: auto;
+        /* Allows horizontal scrolling */
+    }
+}
